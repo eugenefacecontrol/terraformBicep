@@ -4,18 +4,18 @@
 
 ```bash
 # 1. Создание Resource Group
-az group create \
-  --name myResourceGroupAG \
+az group create `
+  --name myResourceGroupAG `
   --location eastus
 
 # 2. Развертывание Bicep-файла
-az deployment group create \
-  --resource-group myResourceGroupAG \
-  --template-file main.bicep \
+az deployment group create `
+  --resource-group myResourceGroupAG `
+  --template-file main.bicep `
   --parameters adminUsername=<admin-username>
 
 # 3. Список ресурсов в группе
-az resource list \
+az resource list `
   --resource-group myResourceGroupAG
 ```
 
